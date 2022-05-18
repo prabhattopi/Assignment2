@@ -1,26 +1,17 @@
 import React from 'react'
 import { useState } from "react";
+import "../App.css"
 
 export const Counter = () => {
     
     const [count,setCount]=useState(0);
-    const sor={
-      color:"green"
-    }
-    
-    let cou=count
-    console.log(count)
-    if(cou%2!=0){
-      sor.color="red"
-
-    }
-     
+ 
 
   return (
    
     <div>
         
-        <h1>Conter App:<span style={sor}>{count}</span></h1>
+        <h1>Conter App:<span classname ={ count%2==1?"red":"green"}>{count}</span></h1>
       
 
         <button onClick={()=>{setCount(count + 1)
